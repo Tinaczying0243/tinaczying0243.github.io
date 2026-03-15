@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] — 2026-03-14
+
+### Changed
+- Replaced cool blue/purple background palette with warm photography-inspired tones (#FFFAF5, #FFF3E8, warm orange accents) across all pages
+- Hero section redesigned: single-column layout, category pill links (Multimedia, Writing, Photography) placed directly under bio
+- All emojis removed from every page and component
+- Navbar background updated to warm tint
+
+### Removed
+- Resume page and navigation link
+- TC avatar circle and floating credential badges from hero
+- Languages / blue gradient section from home page
+
 ## [1.0.0] — 2026-03-14
 
 ### Added
