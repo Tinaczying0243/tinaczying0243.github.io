@@ -67,18 +67,6 @@ export const works: WorkItem[] = [
     hosted: true,
   },
   {
-    id: "california-texas-exodus",
-    title: "California-Texas Exodus: Interactive Map",
-    outlet: "Data Journalism Project",
-    date: "September 2025",
-    description: "Interactive HTML maps built for the Mercury News investigation into California's corporate exodus — visualizing which companies left, where they went, and the economic footprint of the migration.",
-    url: "https://github.com/Tinaczying0243/california-texas-exodus",
-    tags: ["Interactive Map", "Data Visualization", "California"],
-    category: "writing-tech",
-    featured: true,
-    type: "Data Project",
-  },
-  {
     id: "california-layoffs",
     title: "California Higher Education Layoffs: UC, Stanford and Cal State Universities Cut, Freeze Jobs",
     outlet: "The Mercury News",
