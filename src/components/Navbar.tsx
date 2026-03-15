@@ -8,7 +8,7 @@ const navLinks = [
   { to: "/multimedia", label: "Multimedia" },
   { to: "/writing", label: "Writing" },
   { to: "/photography", label: "Photography" },
-  { to: "/resume", label: "Resume" },
+
 ];
 
 export default function Navbar() {

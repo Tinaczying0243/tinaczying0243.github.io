@@ -8,14 +8,6 @@ function getTagColor(index: number) {
 }
 
 
-const typeIconMap: Record<string, string> = {
-  "Multimedia Story": "🎬",
-  "Interactive Data Story": "📊",
-  "News": "📰",
-  "Feature": "✍️",
-  "Live Blog": "⚡",
-  "Explainer": "💡",
-};
 
 interface WorkCardProps {
   item: WorkItem;
@@ -35,7 +27,7 @@ export default function WorkCard({ item, variant = "default" }: WorkCardProps) {
         <div className="work-card__meta">
           {item.type && (
             <span className="work-card__type">
-              {typeIconMap[item.type] || "📄"} {item.type}
+              {item.type}
             </span>
           )}
           <span className="work-card__outlet">{item.outlet}</span>
