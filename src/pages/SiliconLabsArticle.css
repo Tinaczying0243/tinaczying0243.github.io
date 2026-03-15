@@ -218,10 +218,88 @@
   color: var(--color-text);
 }
 
+/* ===== BYLINE ===== */
+.article-byline {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+/* ===== SECTION HEADINGS (generic articles) ===== */
+.article-section-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 2.25rem 0 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ===== MAP EMBEDS ===== */
+.article-map-embed {
+  margin: 2rem 0 2.5rem;
+}
+
+.article-map-embed__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.article-map-embed__iframe {
+  width: 100%;
+  height: 520px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  display: block;
+}
+
+/* ===== PAYWALL NOTICE ===== */
+.article-paywall {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 2rem 2rem 2.25rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.article-paywall__link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+.article-paywall__link:hover {
+  opacity: 0.8;
+}
+
+/* ===== SOURCE ATTRIBUTION ===== */
+.article-source {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.article-source a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .article-header { padding: 48px 0 40px; }
   .article-body { padding: 40px 0 72px; }
   .chart-block { padding: 20px 16px 16px; }
   .article-meta__date { margin-left: 0; }
+  .article-map-embed__iframe { height: 380px; }
 }
