@@ -1,7 +1,6 @@
+import { Link } from "react-router-dom";
 import type { WorkItem } from "../data/portfolioData";
 import "./WorkCard.css";
-
-
 
 interface WorkCardProps {
   item: WorkItem;
@@ -9,13 +8,10 @@ interface WorkCardProps {
 }
 
 export default function WorkCard({ item, variant = "default" }: WorkCardProps) {
-  return (
-    <a
-      href={item.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`work-card card ${variant === "horizontal" ? "work-card--horizontal" : ""}`}
-    >
+  const className = `work-card card ${variant === "horizontal" ? "work-card--horizontal" : ""}`;
+
+  const inner = (
+    <>
       <div className="work-card__color-bar" data-category={item.category} />
       <div className="work-card__body">
         <div className="work-card__meta">
@@ -44,6 +40,25 @@ export default function WorkCard({ item, variant = "default" }: WorkCardProps) {
           </span>
         </div>
       </div>
+    </>
+  );
+
+  if (item.hosted) {
+    return (
+      <Link to={item.url} className={className}>
+        {inner}
+      </Link>
+    );
+  }
+
+  return (
+    <a
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {inner}
     </a>
   );
 }

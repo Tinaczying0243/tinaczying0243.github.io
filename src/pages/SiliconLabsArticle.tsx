@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, Legend,
@@ -10,11 +10,6 @@ import "./SiliconLabsArticle.css";
 const stockMoveData = [
   { label: "Before\nAnnouncement", price: 100, fill: "#D4E2DA" },
   { label: "After\nAnnouncement", price: 149, fill: "#2E6B4F" },
-];
-
-const acquisitionData = [
-  { name: "National Semiconductor (2011)", value: 6.5 },
-  { name: "Silicon Labs (2025)", value: 7.5 },
 ];
 
 const revenueData = [
@@ -31,18 +26,6 @@ const savingsData = [
 ];
 
 // ── Custom tooltip ─────────────────────────────────────────────────────────────
-
-function DollarTooltip({ active, payload, label }: any) {
-  if (active && payload?.length) {
-    return (
-      <div className="chart-tooltip">
-        <p className="chart-tooltip__label">{label}</p>
-        <p className="chart-tooltip__value">${payload[0].value}B</p>
-      </div>
-    );
-  }
-  return null;
-}
 
 function SavingsTooltip({ active, payload, label }: any) {
   if (active && payload?.length) {
@@ -73,13 +56,14 @@ function StockTooltip({ active, payload }: any) {
 // ── Page ──────────────────────────────────────────────────────────────────────
 
 export default function SiliconLabsArticle() {
+  const navigate = useNavigate();
   return (
     <main className="page-enter article-page">
 
       {/* HEADER */}
       <header className="article-header">
         <div className="article-container">
-          <Link to="/news-clips" className="article-back">← News Clips</Link>
+          <button className="article-back" onClick={() => navigate(-1)}>← Back</button>
           <div className="article-meta">
             <span className="article-meta__type">News Clip</span>
             <span className="article-meta__outlet">Weekly Semiconductor News</span>
@@ -164,47 +148,6 @@ export default function SiliconLabsArticle() {
             For Texas Instruments, the acquisition marks its biggest transaction since the
             $6.5 billion acquisition of National Semiconductor in 2011.
           </p>
-
-          {/* ── Chart 2: Acquisition Comparison ── */}
-          <figure className="chart-block">
-            <figcaption className="chart-block__caption">
-              <span className="chart-block__label">Texas Instruments' Largest Acquisitions</span>
-              <span className="chart-block__note">Deal value in billions USD</span>
-            </figcaption>
-            <div className="chart-block__inner chart-block__inner--sm">
-              <ResponsiveContainer width="100%" height={220}>
-                <BarChart
-                  data={acquisitionData}
-                  layout="vertical"
-                  barSize={36}
-                  margin={{ top: 8, right: 48, bottom: 8, left: 8 }}
-                >
-                  <CartesianGrid horizontal={false} stroke="#D4E2DA" />
-                  <XAxis
-                    type="number"
-                    domain={[0, 9]}
-                    tickFormatter={(v) => `$${v}B`}
-                    tick={{ fontSize: 12, fill: "#8AA398", fontFamily: "Inter, sans-serif" }}
-                    axisLine={false}
-                    tickLine={false}
-                  />
-                  <YAxis
-                    type="category"
-                    dataKey="name"
-                    width={200}
-                    tick={{ fontSize: 12, fill: "#4A6158", fontFamily: "Inter, sans-serif" }}
-                    axisLine={false}
-                    tickLine={false}
-                  />
-                  <Tooltip content={<DollarTooltip />} cursor={{ fill: "rgba(46,107,79,0.05)" }} />
-                  <Bar dataKey="value" radius={[0, 4, 4, 0]}>
-                    <Cell fill="#D4E2DA" />
-                    <Cell fill="#2E6B4F" />
-                  </Bar>
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </figure>
 
           {/* ── Paragraph 4 (revenue) ── */}
           <p className="article-p">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { works } from "../data/portfolioData";
 import "./NewsClips.css";
 
-const clips = works.filter((w) => w.category === "news-clip");
+const clips = works.filter((w) => w.hosted);
 
 // Derive unique series names from the data — new sectors appear automatically
 const allSeries = Array.from(new Set(clips.map((c) => c.outlet)));

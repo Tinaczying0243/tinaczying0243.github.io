@@ -1,9 +1,9 @@
 export const journalist = {
   name: "Tina Chen",
-  email: "ziying_chen@berkeley.edu",
+  email: "jingjingczying@gmail.com",
   phone: "+1 (510) 682-0406",
   location: "San Francisco Bay Area",
-  bio: "Tina Chen is a master's student in multimedia journalism at the UC Berkeley Graduate School of Journalism, exploring creative ways to expose structural inequality. With experience at Bay Area News Group, Oakland North, Mission Local, and Xinhua News Agency, she specializes in business and tech reporting, investigative journalism, and data storytelling — where numbers and nuance meet.",
+  bio: "Tina Chen is a master's student in multimedia journalism at the UC Berkeley Graduate School of Journalism, exploring creative ways to expose structural inequality. With experience at Bay Area News Group, Oakland North, Mission Local, and Xinhua News Agency, she specializes in business and tech reporting, investigative journalism, and data storytelling.",
   bioShort: "Multimedia journalist at UC Berkeley. Business & tech reporter. Data storyteller.",
   languages: ["English", "Mandarin", "Cantonese", "Teochew"],
   github: "https://github.com/username",
@@ -17,11 +17,12 @@ export interface WorkItem {
   description: string;
   url: string;
   tags: string[];
-  category: "multimedia" | "writing-tech" | "writing-local" | "photography" | "news-clip";
+  category: "multimedia" | "writing-tech" | "writing-local";
   featured?: boolean;
   type?: string;
   /** true when the article is hosted on this site rather than linking externally */
   hosted?: boolean;
+  sector?: string;
 }
 
 export const works: WorkItem[] = [
@@ -124,7 +125,7 @@ export const works: WorkItem[] = [
     type: "Explainer",
   },
 
-  // NEWS CLIPS
+  // NEWS CLIPS (Weekly Semiconductor News)
   {
     id: "nlight-lasr",
     title: "nLight Surges 770% in Past Year as Defense Sales Jump",
@@ -133,7 +134,7 @@ export const works: WorkItem[] = [
     description: "nLight hits a five-year high on record $175M in aerospace and defense revenue — up 60% — as U.S. government demand for directed-energy laser weapons accelerates.",
     url: "/news-clips/nlight-lasr",
     tags: ["Defense Tech", "Lasers", "Semiconductors"],
-    category: "news-clip",
+    category: "writing-tech",
     hosted: true,
     type: "News Clip",
   },
@@ -145,7 +146,7 @@ export const works: WorkItem[] = [
     description: "Advanced Energy Industries posts $1.8B in revenue as data-center sales surge 107% to $587M, fueled by AI infrastructure spending from Amazon, Meta, Microsoft, and Alphabet.",
     url: "/news-clips/advanced-energy-aeis",
     tags: ["Semiconductors", "Data Centers", "AI Infrastructure"],
-    category: "news-clip",
+    category: "writing-tech",
     hosted: true,
     type: "News Clip",
   },
@@ -157,44 +158,9 @@ export const works: WorkItem[] = [
     description: "Texas Instruments pays $7.5B for Silicon Labs — its biggest deal since 2011 — triggering a 49% single-session stock surge as TI bets on wireless IoT to offset slowing industrial and automotive revenues.",
     url: "/news-clips/silicon-labs-ti",
     tags: ["Semiconductors", "M&A", "IoT"],
-    category: "news-clip",
+    category: "writing-tech",
     hosted: true,
     type: "News Clip",
-  },
-
-  // PHOTOGRAPHY
-  {
-    id: "fulbright-photo",
-    title: "Faces Behind the Funding Freeze: Fulbright Scholars in the Bay Area",
-    outlet: "UC Berkeley Graduate School of Journalism",
-    date: "May 2025",
-    description: "Documentary portraits of Fulbright scholars navigating uncertainty after the federal government cut their support mid-year.",
-    url: "https://readymag.website/u1929452997/5452467/",
-    tags: ["Documentary", "Portraiture", "Higher Education"],
-    category: "photography",
-    type: "Photo Essay",
-  },
-  {
-    id: "election-photo",
-    title: "Election Night 2024: On the Ground in San Francisco",
-    outlet: "Mission Local",
-    date: "November 2024",
-    description: "Voters, candidates, and watch parties across San Francisco — documentary photography from a night that held the city's breath.",
-    url: "https://missionlocal.org/2024/11/election-2024-live-updates-from-across-san-francisco-november-races/",
-    tags: ["Elections", "Documentary", "San Francisco"],
-    category: "photography",
-    type: "Photo Essay",
-  },
-  {
-    id: "exhibition",
-    title: "Exhibition Curation: Non-Visual Photography",
-    outlet: "3rd Media Anthropology Conference",
-    date: "June 2023",
-    description: "Photographs taken by visually impaired artists — an exhibition exploring emotion, memory, and how we see without seeing.",
-    url: "https://readymag.website/u1929452997/5452467/",
-    tags: ["Curation", "Documentary", "Exhibition"],
-    category: "photography",
-    type: "Exhibition",
   },
 ];
 

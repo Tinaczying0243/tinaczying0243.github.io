@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell,
   PieChart, Pie, Legend,
@@ -22,12 +22,6 @@ const revenueSegmentData = [
 const customerMixData = [
   { name: "U.S. Government", value: 35, color: "#2E6B4F" },
   { name: "Defense Contractors & Other", value: 65, color: "#D4E2DA" },
-];
-
-// Revenue growth total
-const totalRevenueData = [
-  { year: "2024", revenue: 198 },
-  { year: "2025", revenue: 261 },
 ];
 
 // ── Custom tooltips ────────────────────────────────────────────────────────────
@@ -74,28 +68,17 @@ function CustomerTooltip({ active, payload }: any) {
   return null;
 }
 
-function RevTooltip({ active, payload, label }: any) {
-  if (active && payload?.length) {
-    return (
-      <div className="chart-tooltip">
-        <p className="chart-tooltip__label">{label}</p>
-        <p className="chart-tooltip__value">${payload[0].value}M</p>
-      </div>
-    );
-  }
-  return null;
-}
-
 // ── Page ──────────────────────────────────────────────────────────────────────
 
 export default function nLightArticle() {
+  const navigate = useNavigate();
   return (
     <main className="page-enter article-page">
 
       {/* HEADER */}
       <header className="article-header">
         <div className="article-container">
-          <Link to="/news-clips" className="article-back">← News Clips</Link>
+          <button className="article-back" onClick={() => navigate(-1)}>← Back</button>
           <div className="article-meta">
             <span className="article-meta__type">News Clip</span>
             <span className="article-meta__outlet">Weekly Semiconductor News</span>
@@ -262,37 +245,6 @@ export default function nLightArticle() {
             During the last quarter, nLight exited cutting and welding as it sharpened
             its focus on defense applications.
           </p>
-
-          {/* Chart 4: Total revenue growth */}
-          <figure className="chart-block">
-            <figcaption className="chart-block__caption">
-              <span className="chart-block__label">Total Revenue</span>
-              <span className="chart-block__note">Year-over-year · millions USD</span>
-            </figcaption>
-            <div className="chart-block__inner chart-block__inner--sm">
-              <ResponsiveContainer width="100%" height={200}>
-                <BarChart data={totalRevenueData} barSize={64} margin={{ top: 16, right: 24, bottom: 0, left: 0 }}>
-                  <CartesianGrid vertical={false} stroke="#D4E2DA" />
-                  <XAxis
-                    dataKey="year"
-                    tick={{ fontSize: 13, fill: "#4A6158", fontFamily: "Inter, sans-serif" }}
-                    axisLine={false} tickLine={false}
-                  />
-                  <YAxis
-                    domain={[0, 320]}
-                    tickFormatter={(v) => `$${v}M`}
-                    tick={{ fontSize: 12, fill: "#8AA398", fontFamily: "Inter, sans-serif" }}
-                    axisLine={false} tickLine={false} width={52}
-                  />
-                  <Tooltip content={<RevTooltip />} cursor={{ fill: "rgba(46,107,79,0.05)" }} />
-                  <Bar dataKey="revenue" radius={[4, 4, 0, 0]}>
-                    <Cell fill="#D4E2DA" />
-                    <Cell fill="#2E6B4F" />
-                  </Bar>
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </figure>
 
           <blockquote className="article-quote">
             <p>

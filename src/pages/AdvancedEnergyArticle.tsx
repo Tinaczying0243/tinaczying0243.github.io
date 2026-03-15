@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, Legend,
@@ -21,13 +21,6 @@ const revenueMixData = [
 const dataCenterGrowthData = [
   { year: "2024", revenue: 284 },
   { year: "2025", revenue: 587 },
-];
-
-const hyperscalerData = [
-  { name: "Amazon", capex: 105 },
-  { name: "Microsoft", capex: 80 },
-  { name: "Alphabet", capex: 75 },
-  { name: "Meta", capex: 65 },
 ];
 
 // ── Custom tooltips ────────────────────────────────────────────────────────────
@@ -70,28 +63,17 @@ function DataCenterTooltip({ active, payload, label }: any) {
   return null;
 }
 
-function CapexTooltip({ active, payload, label }: any) {
-  if (active && payload?.length) {
-    return (
-      <div className="chart-tooltip">
-        <p className="chart-tooltip__label">{label}</p>
-        <p className="chart-tooltip__value">~${payload[0].value}B capex (2026E)</p>
-      </div>
-    );
-  }
-  return null;
-}
-
 // ── Page ──────────────────────────────────────────────────────────────────────
 
 export default function AdvancedEnergyArticle() {
+  const navigate = useNavigate();
   return (
     <main className="page-enter article-page">
 
       {/* HEADER */}
       <header className="article-header">
         <div className="article-container">
-          <Link to="/news-clips" className="article-back">← News Clips</Link>
+          <button className="article-back" onClick={() => navigate(-1)}>← Back</button>
           <div className="article-meta">
             <span className="article-meta__type">News Clip</span>
             <span className="article-meta__outlet">Weekly Semiconductor News</span>
@@ -242,46 +224,6 @@ export default function AdvancedEnergyArticle() {
             estimates those firms could spend about $650 billion on capital expenditures
             in 2026, with roughly 75% tied to artificial-intelligence infrastructure.
           </p>
-
-          {/* Chart 4: Hyperscaler 2026E capex */}
-          <figure className="chart-block">
-            <figcaption className="chart-block__caption">
-              <span className="chart-block__label">Hyperscaler Capex — 2026 Estimate</span>
-              <span className="chart-block__note">Bloomberg Intelligence estimates · billions USD · ~75% AI-related</span>
-            </figcaption>
-            <div className="chart-block__inner chart-block__inner--sm">
-              <ResponsiveContainer width="100%" height={220}>
-                <BarChart
-                  data={hyperscalerData}
-                  layout="vertical"
-                  barSize={32}
-                  margin={{ top: 8, right: 48, bottom: 8, left: 8 }}
-                >
-                  <CartesianGrid horizontal={false} stroke="#D4E2DA" />
-                  <XAxis
-                    type="number"
-                    domain={[0, 130]}
-                    tickFormatter={(v) => `$${v}B`}
-                    tick={{ fontSize: 12, fill: "#8AA398", fontFamily: "Inter, sans-serif" }}
-                    axisLine={false} tickLine={false}
-                  />
-                  <YAxis
-                    type="category"
-                    dataKey="name"
-                    width={80}
-                    tick={{ fontSize: 13, fill: "#4A6158", fontFamily: "Inter, sans-serif" }}
-                    axisLine={false} tickLine={false}
-                  />
-                  <Tooltip content={<CapexTooltip />} cursor={{ fill: "rgba(46,107,79,0.05)" }} />
-                  <Bar dataKey="capex" fill="#2E6B4F" radius={[0, 4, 4, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-            <div className="chart-block__callout">
-              <span className="chart-block__callout-number">$650B</span>
-              <span className="chart-block__callout-text">combined hyperscaler capex forecast for 2026</span>
-            </div>
-          </figure>
 
           <blockquote className="article-quote">
             <p>
