@@ -20,6 +20,8 @@ export interface WorkItem {
   category: "multimedia" | "writing-tech" | "writing-local" | "photography" | "news-clip";
   featured?: boolean;
   type?: string;
+  /** true when the article is hosted on this site rather than linking externally */
+  hosted?: boolean;
 }
 
 export const works: WorkItem[] = [
@@ -129,9 +131,10 @@ export const works: WorkItem[] = [
     outlet: "Business Reporting",
     date: "February 2025",
     description: "Texas Instruments pays $7.5B for Silicon Labs — its biggest deal since 2011 — triggering a 49% single-session stock surge as TI bets on wireless IoT to offset slowing industrial and automotive revenues.",
-    url: "#",
+    url: "/news-clips/silicon-labs-ti",
     tags: ["Semiconductors", "M&A", "IoT"],
     category: "news-clip",
+    hosted: true,
     type: "News Clip",
   },
 

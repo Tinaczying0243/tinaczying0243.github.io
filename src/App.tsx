@@ -5,6 +5,7 @@ import Multimedia from "./pages/Multimedia";
 import Writing from "./pages/Writing";
 import Photography from "./pages/Photography";
 import NewsClips from "./pages/NewsClips";
+import SiliconLabsArticle from "./pages/SiliconLabsArticle";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/writing" element={<Writing />} />
         <Route path="/photography" element={<Photography />} />
         <Route path="/news-clips" element={<NewsClips />} />
+        <Route path="/news-clips/silicon-labs-ti" element={<SiliconLabsArticle />} />
       </Routes>
       <Footer />
     </BrowserRouter>
