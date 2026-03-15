@@ -1,12 +1,6 @@
 import type { WorkItem } from "../data/portfolioData";
 import "./WorkCard.css";
 
-const tagColors = ["tag-blue", "tag-teal", "tag-violet", "tag-orange", "tag-emerald"];
-
-function getTagColor(index: number) {
-  return tagColors[index % tagColors.length];
-}
-
 
 
 interface WorkCardProps {
@@ -39,8 +33,8 @@ export default function WorkCard({ item, variant = "default" }: WorkCardProps) {
 
         <div className="work-card__footer">
           <div className="work-card__tags">
-            {item.tags.slice(0, 3).map((tag, i) => (
-              <span key={tag} className={`tag ${getTagColor(i)}`}>
+            {item.tags.slice(0, 3).map((tag) => (
+              <span key={tag} className="work-card__tag">
                 {tag}
               </span>
             ))}

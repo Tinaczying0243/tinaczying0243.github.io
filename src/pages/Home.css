@@ -1,6 +1,6 @@
 /* ===== HERO ===== */
 .hero {
-  background: linear-gradient(150deg, #FFF7ED 0%, #FFF2E8 50%, #FFFBEB 100%);
+  background: linear-gradient(150deg, #F8FCF4 0%, #F0F6F2 50%, #F8FCF4 100%);
   padding: 96px 0 80px;
   position: relative;
   overflow: hidden;
@@ -13,7 +13,7 @@
   right: -120px;
   width: 480px;
   height: 480px;
-  background: radial-gradient(circle, rgba(249,115,22,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(46,107,79,0.05) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -113,7 +113,7 @@
 
 .portfolio-tab--active .portfolio-tab__count {
   background: var(--color-accent-light);
-  color: #C2410C;
+  color: var(--color-primary-dark);
 }
 
 /* ===== PORTFOLIO GRID ===== */
