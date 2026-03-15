@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5 {
 .heading-md { font-size: clamp(1.3rem, 2.5vw, 1.7rem); font-weight: 600; }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-teal));
+  background: linear-gradient(135deg, var(--color-accent), #E85D04);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -100,10 +100,10 @@ h1, h2, h3, h4, h5 {
   transition: all 0.2s ease; border: none;
   font-family: 'Inter', sans-serif; text-decoration: none;
 }
-.btn-primary { background: var(--color-primary); color: white; box-shadow: 0 4px 14px rgba(59,130,246,0.4); }
-.btn-primary:hover { background: var(--color-primary-dark); box-shadow: 0 6px 20px rgba(59,130,246,0.5); transform: translateY(-1px); }
-.btn-outline { background: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
-.btn-outline:hover { background: var(--color-primary-light); transform: translateY(-1px); }
+.btn-primary { background: var(--color-accent); color: white; box-shadow: 0 4px 14px rgba(249,115,22,0.35); }
+.btn-primary:hover { background: #EA6C0A; box-shadow: 0 6px 20px rgba(249,115,22,0.45); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--color-accent); border: 2px solid var(--color-accent); }
+.btn-outline:hover { background: var(--color-accent-light); transform: translateY(-1px); }
 
 /* ===== CARDS ===== */
 .card {
@@ -122,8 +122,8 @@ h1, h2, h3, h4, h5 {
 
 /* ===== SECTION HEADER ===== */
 .section-header { margin-bottom: 48px; }
-.section-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 10px; }
-.section-divider { width: 48px; height: 4px; background: linear-gradient(90deg, var(--color-primary), var(--color-teal)); border-radius: 2px; margin-top: 14px; }
+.section-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 10px; }
+.section-divider { width: 48px; height: 4px; background: linear-gradient(90deg, var(--color-accent), #FBBF24); border-radius: 2px; margin-top: 14px; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) { .section { padding: 56px 0; } .container { padding: 0 16px; } }

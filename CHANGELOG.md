@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] — 2026-03-14
+
+### Changed
+- Removed top navigation bar entirely; site navigation now handled by sticky tab bar on home page
+- Home page redesigned as single-page portfolio browser with tab filtering (All Work / Multimedia / Tech & Business / Local News / Photography)
+- Tab bar is sticky at top of viewport, replacing the navbar functionally
+- Card descriptions rewritten to be shorter and punchier to better hook viewers
+- WorkCard color accents updated to warm orange palette (removed blue/violet references from color bars, type badge, outlet, and read-more link)
+- Color bars per category updated to warm gradient tones
+
+### Added
+- Three photography items added to `portfolioData.ts` to appear in home page tab filter (Fulbright photo essay, election night, SF Chronicle exhibition)
+
 ## [1.1.0] — 2026-03-14
 
 ### Changed
