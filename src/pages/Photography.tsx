@@ -1,7 +1,5 @@
 import "./Photography.css";
 
-// Photography grid items — placeholders linking to the ReadyMag multimedia project
-// which features photography from the Fulbright project
 const photoItems = [
   {
     id: 1,
@@ -10,7 +8,6 @@ const photoItems = [
     year: "2025",
     url: "https://readymag.website/u1929452997/5452467/",
     gradient: "linear-gradient(135deg, #3B82F6, #06B6D4)",
-    emoji: "👥",
   },
   {
     id: 2,
@@ -19,7 +16,6 @@ const photoItems = [
     year: "2024",
     url: "https://oaklandnorth.net/2024/12/16/oakland-east-bay-booksellers-reopens-after-fire/",
     gradient: "linear-gradient(135deg, #8B5CF6, #EC4899)",
-    emoji: "📚",
   },
   {
     id: 3,
@@ -28,7 +24,6 @@ const photoItems = [
     year: "2023",
     url: "https://readymag.website/u1929452997/5452467/",
     gradient: "linear-gradient(135deg, #F97316, #FBBF24)",
-    emoji: "🎨",
   },
   {
     id: 4,
@@ -37,7 +32,6 @@ const photoItems = [
     year: "2024",
     url: "https://missionlocal.org/2024/11/election-2024-live-updates-from-across-san-francisco-november-races/",
     gradient: "linear-gradient(135deg, #10B981, #06B6D4)",
-    emoji: "🗳️",
   },
   {
     id: 5,
@@ -46,7 +40,6 @@ const photoItems = [
     year: "2025",
     url: "https://www.mercurynews.com/2025/07/22/labubu-craze-creativity-bay-area-businesses/",
     gradient: "linear-gradient(135deg, #EC4899, #8B5CF6)",
-    emoji: "🪆",
   },
   {
     id: 6,
@@ -55,14 +48,12 @@ const photoItems = [
     year: "2025",
     url: "https://edisonyzwu.github.io/interactive/",
     gradient: "linear-gradient(135deg, #1D4ED8, #8B5CF6)",
-    emoji: "📊",
   },
 ];
 
 export default function Photography() {
   return (
     <main className="page-enter">
-      {/* Header */}
       <section className="page-hero page-hero--photography">
         <div className="container">
           <p className="section-eyebrow">Portfolio</p>
@@ -74,7 +65,6 @@ export default function Photography() {
         </div>
       </section>
 
-      {/* Photo grid */}
       <section className="section">
         <div className="container">
           <div className="photo-grid">
@@ -86,13 +76,9 @@ export default function Photography() {
                 rel="noopener noreferrer"
                 className="photo-card card"
               >
-                <div
-                  className="photo-card__image"
-                  style={{ background: item.gradient }}
-                >
-                  <span className="photo-card__emoji">{item.emoji}</span>
+                <div className="photo-card__image" style={{ background: item.gradient }}>
                   <div className="photo-card__overlay">
-                    <span>View Story →</span>
+                    <span>View Story</span>
                   </div>
                 </div>
                 <div className="photo-card__info">
@@ -108,11 +94,9 @@ export default function Photography() {
         </div>
       </section>
 
-      {/* Curation note */}
       <section className="section-sm photo-note-section">
         <div className="container">
           <div className="photo-note">
-            <div className="photo-note__icon">📷</div>
             <div className="photo-note__text">
               <h3>Exhibition Curation</h3>
               <p>
