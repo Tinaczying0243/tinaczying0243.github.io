@@ -23,6 +23,9 @@
 .work-card__color-bar[data-category="photography"] {
   background: linear-gradient(90deg, #3A7A5A, #6AAF8A);
 }
+.work-card__color-bar[data-category="news-clip"] {
+  background: linear-gradient(90deg, #3A5A6A, #5A8A9A);
+}
 
 .work-card__body {
   padding: 22px;

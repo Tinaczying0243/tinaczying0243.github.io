@@ -17,7 +17,7 @@ export interface WorkItem {
   description: string;
   url: string;
   tags: string[];
-  category: "multimedia" | "writing-tech" | "writing-local" | "photography";
+  category: "multimedia" | "writing-tech" | "writing-local" | "photography" | "news-clip";
   featured?: boolean;
   type?: string;
 }
@@ -120,6 +120,19 @@ export const works: WorkItem[] = [
     tags: ["Bay Area", "Nature", "Public Safety"],
     category: "writing-local",
     type: "Explainer",
+  },
+
+  // NEWS CLIPS
+  {
+    id: "silicon-labs-ti",
+    title: "Silicon Labs Jumps 49% After Texas Instruments Acquisition",
+    outlet: "Business Reporting",
+    date: "February 2025",
+    description: "Texas Instruments pays $7.5B for Silicon Labs — its biggest deal since 2011 — triggering a 49% single-session stock surge as TI bets on wireless IoT to offset slowing industrial and automotive revenues.",
+    url: "#",
+    tags: ["Semiconductors", "M&A", "IoT"],
+    category: "news-clip",
+    type: "News Clip",
   },
 
   // PHOTOGRAPHY

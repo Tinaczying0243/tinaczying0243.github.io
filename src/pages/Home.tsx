@@ -3,13 +3,14 @@ import { journalist, works } from "../data/portfolioData";
 import WorkCard from "../components/WorkCard";
 import "./Home.css";
 
-type Tab = "all" | "multimedia" | "writing-tech" | "writing-local" | "photography";
+type Tab = "all" | "multimedia" | "writing-tech" | "writing-local" | "photography" | "news-clip";
 
 const tabs: { id: Tab; label: string }[] = [
   { id: "all", label: "All Work" },
   { id: "multimedia", label: "Multimedia" },
   { id: "writing-tech", label: "Tech & Business" },
   { id: "writing-local", label: "Local News" },
+  { id: "news-clip", label: "News Clips" },
   { id: "photography", label: "Photography" },
 ];
 
