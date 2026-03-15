@@ -103,6 +103,16 @@
   font-weight: 600;
 }
 
+/* News Clips tab links to its own page */
+.portfolio-tab--link {
+  text-decoration: none;
+  color: var(--color-text-secondary);
+}
+
+.portfolio-tab--link:hover {
+  color: var(--color-text);
+}
+
 .portfolio-tab__count {
   background: var(--color-surface-2);
   color: var(--color-text-muted);

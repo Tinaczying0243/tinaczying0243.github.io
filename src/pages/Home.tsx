@@ -1,27 +1,31 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { journalist, works } from "../data/portfolioData";
 import WorkCard from "../components/WorkCard";
 import "./Home.css";
 
-type Tab = "all" | "multimedia" | "writing-tech" | "writing-local" | "photography" | "news-clip";
+type Tab = "all" | "multimedia" | "writing-tech" | "writing-local" | "photography";
 
 const tabs: { id: Tab; label: string }[] = [
   { id: "all", label: "All Work" },
   { id: "multimedia", label: "Multimedia" },
   { id: "writing-tech", label: "Tech & Business" },
   { id: "writing-local", label: "Local News" },
-  { id: "news-clip", label: "News Clips" },
   { id: "photography", label: "Photography" },
 ];
 
+// News clips are on their own dedicated page; exclude them from the home grid
+const portfolioWorks = works.filter((w) => w.category !== "news-clip");
+const newsClipCount = works.filter((w) => w.category === "news-clip").length;
+
 function getCount(tab: Tab) {
-  if (tab === "all") return works.length;
-  return works.filter((w) => w.category === tab).length;
+  if (tab === "all") return portfolioWorks.length;
+  return portfolioWorks.filter((w) => w.category === tab).length;
 }
 
 function getWorks(tab: Tab) {
-  if (tab === "all") return works;
-  return works.filter((w) => w.category === tab);
+  if (tab === "all") return portfolioWorks;
+  return portfolioWorks.filter((w) => w.category === tab);
 }
 
 export default function Home() {
@@ -75,6 +79,11 @@ export default function Home() {
               <span className="portfolio-tab__count">{getCount(tab.id)}</span>
             </button>
           ))}
+          {/* News Clips navigates to its own dedicated page */}
+          <Link to="/news-clips" className="portfolio-tab portfolio-tab--link">
+            News Clips
+            <span className="portfolio-tab__count">{newsClipCount}</span>
+          </Link>
         </div>
       </div>
 
