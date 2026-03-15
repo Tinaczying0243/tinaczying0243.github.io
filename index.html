@@ -3,6 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Decode SPA redirect from 404.html query-string encoding
+      // Runs before React boots — uses history.replaceState (no page reload)
+      (function() {
+        var repo = '/tina-chen-portfolio';
+        var search = window.location.search;
+        if (search && search[1] === '/') {
+          var decoded = search.slice(2).replace(/&/, '?');
+          history.replaceState(null, '', repo + '/' + decoded + window.location.hash);
+        }
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tina Chen — Multimedia Journalist</title>
     <meta name="description" content="Portfolio of Tina Chen, multimedia journalist and data reporter at UC Berkeley Graduate School of Journalism. Business, tech, and local news reporting." />
