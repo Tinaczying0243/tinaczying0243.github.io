@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# Tina Chen — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio website for Tina Chen, multimedia journalist at UC Berkeley Graduate School of Journalism. Built with **Vite + React + TypeScript**, deployed via **GitHub Pages**.
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+`https://<your-github-username>.github.io/tina-chen-portfolio/`
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** Vite + React 19 + TypeScript
+- **Routing:** React Router v7 (BrowserRouter with `basename`)
+- **Styling:** Custom CSS with design tokens (no external UI library)
+- **Fonts:** Playfair Display + Inter (Google Fonts)
+- **Deployment:** GitHub Actions → GitHub Pages
 
-## Expanding the ESLint configuration
+## Pages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Page | Route | Description |
+|------|-------|-------------|
+| Home | `/` | Hero, reporting beats, featured works, languages |
+| Multimedia | `/multimedia` | Interactive projects and multimedia packages |
+| Writing | `/writing` | Tech/Business + Local News tabs with 6 articles |
+| Photography | `/photography` | Visual journalism and documentary photography |
+| Resume | `/resume` | Full CV with experience, education, skills |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Development
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev       # Start dev server at localhost:5173
+npm run build     # Production build to dist/
+npm run preview   # Preview production build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment to GitHub Pages
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Create a GitHub repo named `tina-chen-portfolio`
+2. Push this code to the `main` branch
+3. In repo Settings → Pages, set source to **GitHub Actions**
+4. The workflow in `.github/workflows/deploy.yml` will auto-deploy on every push to `main`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+> **Note:** The `base` in `vite.config.ts` and `basename` in `App.tsx` are both set to `/tina-chen-portfolio/`. Update these if your repo has a different name.
+
+## Project Structure
+
 ```
+src/
+  data/portfolioData.ts   # All content data (works, resume, journalist info)
+  components/             # Navbar, Footer, WorkCard
+  pages/                  # Home, Multimedia, Writing, Photography, Resume
+  index.css               # Global styles + CSS custom properties
+```
+
+## Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md)
