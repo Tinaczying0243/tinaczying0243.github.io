@@ -34,7 +34,7 @@ export default function Home() {
         <div className="container hero__inner">
           <p className="section-eyebrow">Multimedia Journalist · UC Berkeley</p>
           <h1 className="heading-xl hero__name">
-            Tina <span className="text-gradient">Chen</span>
+            Tina Chen
           </h1>
           <p className="hero__bio">{journalist.bio}</p>
 
