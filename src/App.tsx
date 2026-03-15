@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Multimedia from "./pages/Multimedia";
 import Writing from "./pages/Writing";
 import Photography from "./pages/Photography";
+import NewsClips from "./pages/NewsClips";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/multimedia" element={<Multimedia />} />
         <Route path="/writing" element={<Writing />} />
         <Route path="/photography" element={<Photography />} />
+        <Route path="/news-clips" element={<NewsClips />} />
       </Routes>
       <Footer />
     </BrowserRouter>
