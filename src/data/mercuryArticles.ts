@@ -6,6 +6,12 @@ export interface ArticleBlock {
   title?: string;
 }
 
+export interface ArticleImage {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
 export interface ArticleData {
   slug: string;
   title: string;
@@ -16,6 +22,7 @@ export interface ArticleData {
   originalUrl?: string;
   tags: string[];
   paywalled?: boolean;
+  image?: ArticleImage;
   blocks: ArticleBlock[];
 }
 
@@ -78,6 +85,11 @@ export const articles: ArticleData[] = [
     date: "August 6, 2025",
     originalUrl: "https://www.mercurynews.com/2025/08/06/layoffs-stanford-california-universities-colleges-cuts-funding/",
     tags: ["Higher Education", "Economy", "California"],
+    image: {
+      src: "https://www.mercurynews.com/wp-content/uploads/2025/05/SJM-L-SJSUCODE-0000-2.jpg?w=1200",
+      alt: "Students walk outside the Charles W. Davidson College of Engineering building at San Jose State University.",
+      caption: "Dai Sugano/Bay Area News Group",
+    },
     paywalled: true,
     blocks: [],
   },
@@ -92,6 +104,11 @@ export const articles: ArticleData[] = [
     date: "July 22, 2025",
     originalUrl: "https://www.mercurynews.com/2025/07/22/labubu-craze-creativity-bay-area-businesses/",
     tags: ["Pop Culture", "Small Business", "Bay Area"],
+    image: {
+      src: "https://www.mercurynews.com/wp-content/uploads/2025/07/SJM-L-BUBUFEST-0715-8.jpg?w=1200",
+      alt: "Labubu toys with permanent tattoos applied by tattoo artist Owen Smith, of Martinez, are displayed during the Labubu Fest in South San Francisco.",
+      caption: "Ray Chavez/Bay Area News Group",
+    },
     blocks: [
       {
         type: "p",
@@ -171,6 +188,11 @@ export const articles: ArticleData[] = [
     date: "August 20, 2025",
     originalUrl: "https://www.mercurynews.com/2025/08/20/violet-valkyries-compares-wnba-mascots/",
     tags: ["Sports Business", "WNBA", "Data"],
+    image: {
+      src: "https://www.mercurynews.com/wp-content/uploads/2025/08/BNG-L-VALKYRIES-0812-10.jpg?w=1200",
+      alt: "The Golden State Valkyries mascot Violet is unveiled at halftime at Chase Center in San Francisco.",
+      caption: "Nhat V. Meyer/Bay Area News Group",
+    },
     paywalled: true,
     blocks: [],
   },
@@ -185,6 +207,11 @@ export const articles: ArticleData[] = [
     date: "August 12, 2025",
     originalUrl: "https://www.mercurynews.com/2025/08/12/wronged-at-a-retailer-in-the-bay-area-theres-a-way-to-complain/",
     tags: ["Consumer Rights", "Bay Area", "Business"],
+    image: {
+      src: "https://www.mercurynews.com/wp-content/uploads/2024/09/Consumer_Prices_88533.jpg?w=1200",
+      alt: "Shoppers pause in the produce section at a Walmart Superstore in Secaucus, New Jersey.",
+      caption: "AP Photo/Eduardo Munoz Alvarez",
+    },
     blocks: [
       {
         type: "p",
@@ -317,6 +344,11 @@ export const articles: ArticleData[] = [
     date: "August 12, 2025",
     originalUrl: "https://www.mercurynews.com/2025/08/12/valkyries-unveil-their-bespectacled-mascot-with-a-tie-to-norse-mythology/",
     tags: ["WNBA", "Bay Area", "Sports"],
+    image: {
+      src: "https://www.mercurynews.com/wp-content/uploads/2025/08/BNG-L-VALKYRIES-0812-9.jpg?w=1200",
+      alt: "The Golden State Valkyries mascot Violet is unveiled at halftime during the game against the Connecticut Sun at Chase Center.",
+      caption: "Nhat V. Meyer/Bay Area News Group",
+    },
     blocks: [
       {
         type: "p",
@@ -363,6 +395,11 @@ export const articles: ArticleData[] = [
     date: "August 15, 2025",
     originalUrl: "https://www.mercurynews.com/2025/08/15/late-summer-gardening-bay-area-pruning-fruit-trees-plants/",
     tags: ["Bay Area", "Gardening", "Lifestyle"],
+    image: {
+      src: "https://www.mercurynews.com/wp-content/uploads/2025/03/Gardening_-_Houseplant_Vacation_46353.jpg?w=1200",
+      alt: "Houseplants vacationing outdoors over summer, needing a gradual transition back into the home to avoid shock.",
+      caption: "Jessica Damiano via AP",
+    },
     blocks: [
       {
         type: "p",
@@ -451,6 +488,11 @@ export const articles: ArticleData[] = [
     date: "August 25, 2025",
     originalUrl: "https://www.mercurynews.com/2025/08/25/new-world-screwworm-everything-you-need-to-know/",
     tags: ["Agriculture", "Public Health", "California"],
+    image: {
+      src: "https://www.mercurynews.com/wp-content/uploads/2025/08/Screwworm_52359-1.jpg?w=1200",
+      alt: "An adult New World screwworm fly sits at rest.",
+      caption: "Denise Bonilla/U.S. Department of Agriculture via AP",
+    },
     blocks: [
       {
         type: "p",
@@ -497,6 +539,11 @@ export const articles: ArticleData[] = [
     date: "July 25, 2025",
     originalUrl: "https://www.mercurynews.com/2025/07/25/yosemite-summer-travel/",
     tags: ["Travel", "California", "Outdoors"],
+    image: {
+      src: "https://www.mercurynews.com/wp-content/uploads/2025/03/SJM-L-YOSEMITE-0318-2_8da50b.jpg?w=1200",
+      alt: "Tourists walk out to Glacier Point with a background view of Half Dome at Yosemite National Park.",
+      caption: "FREDERIC J. BROWN/AFP via Getty Images",
+    },
     blocks: [
       {
         type: "p",
@@ -555,6 +602,11 @@ export const articles: ArticleData[] = [
     date: "July 22, 2025",
     originalUrl: "https://www.mercurynews.com/2025/07/22/unesco-california-national-parks-trump/",
     tags: ["California", "Environment", "Policy"],
+    image: {
+      src: "https://www.mercurynews.com/wp-content/uploads/2022/10/SJM-L-TRAVTOPTEN-1030-01.jpg?w=1200",
+      alt: "Sunrise illuminates Yosemite Valley, seen from the Tunnel View vista point.",
+      caption: "Getty Images",
+    },
     blocks: [
       {
         type: "p",
@@ -605,6 +657,11 @@ export const articles: ArticleData[] = [
     date: "August 22, 2025",
     originalUrl: "https://www.eastbaytimes.com/2025/08/22/snakes-bay-area-what-to-do/",
     tags: ["Bay Area", "Nature", "Public Safety"],
+    image: {
+      src: "https://www.eastbaytimes.com/wp-content/uploads/2025/05/OCR-L-SNAKE-WRANGLER-11-PB.jpg?w=1200",
+      alt: "A Southwestern speckled rattlesnake lies on the desert floor near Landers, California.",
+      caption: "Paul Bersebach/Orange County Register/SCNG",
+    },
     blocks: [
       {
         type: "p",

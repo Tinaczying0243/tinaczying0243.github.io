@@ -7,10 +7,12 @@ import SiliconLabsArticle from "./pages/SiliconLabsArticle";
 import AdvancedEnergyArticle from "./pages/AdvancedEnergyArticle";
 import NLightArticle from "./pages/nLightArticle";
 import MercuryArticle from "./pages/MercuryArticle";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter basename="/tina-chen-portfolio">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/multimedia" element={<Multimedia />} />

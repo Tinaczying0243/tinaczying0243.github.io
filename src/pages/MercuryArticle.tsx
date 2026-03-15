@@ -50,6 +50,27 @@ export default function MercuryArticle() {
         </div>
       </header>
 
+      {/* HERO IMAGE */}
+      {article.image && (
+        <div className="article-hero">
+          <div className="article-container">
+            <figure className="article-hero__figure">
+              <img
+                src={article.image.src}
+                alt={article.image.alt}
+                className="article-hero__img"
+                loading="eager"
+              />
+              {article.image.caption && (
+                <figcaption className="article-hero__caption">
+                  {article.image.caption}
+                </figcaption>
+              )}
+            </figure>
+          </div>
+        </div>
+      )}
+
       {/* BODY */}
       <div className="article-body">
         <div className="article-container">
