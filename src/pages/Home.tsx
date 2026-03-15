@@ -94,7 +94,7 @@ export default function Home() {
           {/* Right: photo */}
           <div className="hero__photo-col">
             <img
-              src="/tina-chen-portfolio/tina-photo.jpg"
+              src="/tina-photo.jpg"
               alt="Tina Chen"
               className="hero__photo"
             />

@@ -7,14 +7,13 @@
   <script>
     // SPA redirect for GitHub Pages — loop-safe canonical pattern
     // Encodes the path into a query string so GitHub Pages always serves index.html
-    // e.g. /tina-chen-portfolio/articles/labubu → /tina-chen-portfolio/?/articles/labubu
-    var repo = '/tina-chen-portfolio';
-    var path = window.location.pathname.slice(repo.length) || '/';
+    // e.g. /articles/labubu → /?/articles/labubu
+    var path = window.location.pathname;
     var search = window.location.search;
     var hash = window.location.hash;
     if (path !== '/') {
       window.location.replace(
-        repo + '/?/' + path.replace(/^\//, '') + (search ? '&' + search.slice(1) : '') + hash
+        '/?/' + path.replace(/^\//, '') + (search ? '&' + search.slice(1) : '') + hash
       );
     }
   </script>

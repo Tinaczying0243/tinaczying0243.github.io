@@ -65,12 +65,12 @@ export const articles: ArticleData[] = [
       {
         type: "map-embed",
         title: "Companies Leaving California",
-        src: "/tina-chen-portfolio/map1.html",
+        src: "/map1.html",
       },
       {
         type: "map-embed",
         title: "2025 HQ Moves",
-        src: "/tina-chen-portfolio/map2.html",
+        src: "/map2.html",
       },
     ],
   },

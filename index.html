@@ -7,11 +7,10 @@
       // Decode SPA redirect from 404.html query-string encoding
       // Runs before React boots — uses history.replaceState (no page reload)
       (function() {
-        var repo = '/tina-chen-portfolio';
         var search = window.location.search;
         if (search && search[1] === '/') {
           var decoded = search.slice(2).replace(/&/, '?');
-          history.replaceState(null, '', repo + '/' + decoded + window.location.hash);
+          history.replaceState(null, '', '/' + decoded + window.location.hash);
         }
       })();
     </script>
