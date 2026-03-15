@@ -5,15 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tina Chen — Multimedia Journalist</title>
   <script>
-    // SPA redirect for GitHub Pages
-    // Stores the full path in sessionStorage then redirects to index.html
-    const path = window.location.pathname;
-    const repo = '/tina-chen-portfolio';
-    const subPath = path.replace(repo, '');
-    if (subPath && subPath !== '/') {
-      sessionStorage.setItem('spa_redirect', subPath);
-    }
-    window.location.replace(repo + '/');
+    // SPA redirect for GitHub Pages (loop-safe)
+    // Encodes the path into a query string so the root index.html is always served.
+    // history.replaceState in index.html silently restores the real URL before React boots.
+    var l = window.location;
+    var segmentCount = 1; // /tina-chen-portfolio = 1 segment
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
   </script>
 </head>
 <body></body>
