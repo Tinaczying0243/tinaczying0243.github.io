@@ -1,27 +1,35 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import { journalist, works } from "../data/portfolioData";
 import WorkCard from "../components/WorkCard";
 import "./Home.css";
 
-const featured = works.filter((w) => w.featured);
+type Tab = "all" | "multimedia" | "writing-tech" | "writing-local" | "photography";
 
-const beats = [
-  { label: "Data Journalism", desc: "Turning raw datasets into visual stories that reveal patterns invisible to the naked eye." },
-  { label: "Business & Tech", desc: "Covering the economic forces reshaping the Bay Area and beyond — from startups to policy." },
-  { label: "Multimedia", desc: "Blending text, interactives, photography, and video into immersive narrative experiences." },
-  { label: "Investigative", desc: "Following the paper trail on structural inequality, funding cuts, and institutional power." },
+const tabs: { id: Tab; label: string }[] = [
+  { id: "all", label: "All Work" },
+  { id: "multimedia", label: "Multimedia" },
+  { id: "writing-tech", label: "Tech & Business" },
+  { id: "writing-local", label: "Local News" },
+  { id: "photography", label: "Photography" },
 ];
 
-const categories = [
-  { to: "/multimedia", label: "Multimedia Projects" },
-  { to: "/writing", label: "Writing" },
-  { to: "/photography", label: "Photography" },
-];
+function getCount(tab: Tab) {
+  if (tab === "all") return works.length;
+  return works.filter((w) => w.category === tab).length;
+}
+
+function getWorks(tab: Tab) {
+  if (tab === "all") return works;
+  return works.filter((w) => w.category === tab);
+}
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState<Tab>("all");
+  const displayed = getWorks(activeTab);
+
   return (
     <main className="page-enter">
-      {/* HERO */}
+      {/* INTRO */}
       <section className="hero">
         <div className="container hero__inner">
           <p className="section-eyebrow">Multimedia Journalist · UC Berkeley</p>
@@ -29,17 +37,6 @@ export default function Home() {
             Tina <span className="text-gradient">Chen</span>
           </h1>
           <p className="hero__bio">{journalist.bio}</p>
-
-          <nav className="hero__categories">
-            {categories.map((cat) => (
-              <Link key={cat.to} to={cat.to} className="hero__category-link">
-                {cat.label}
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Link>
-            ))}
-          </nav>
 
           <div className="hero__contact">
             <a href={`mailto:${journalist.email}`} className="hero__contact-item">
@@ -64,41 +61,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BEATS */}
-      <section className="section beats-section">
-        <div className="container">
-          <div className="section-header">
-            <p className="section-eyebrow">Areas of Focus</p>
-            <h2 className="heading-lg">Reporting Beats</h2>
-            <div className="section-divider" />
-          </div>
-          <div className="beats-grid">
-            {beats.map((beat) => (
-              <div key={beat.label} className="beat-card">
-                <h3 className="beat-card__label">{beat.label}</h3>
-                <p className="beat-card__desc">{beat.desc}</p>
-              </div>
-            ))}
-          </div>
+      {/* PORTFOLIO TABS */}
+      <div className="portfolio-tabs-bar">
+        <div className="container portfolio-tabs">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              className={`portfolio-tab ${activeTab === tab.id ? "portfolio-tab--active" : ""}`}
+              onClick={() => setActiveTab(tab.id)}
+            >
+              {tab.label}
+              <span className="portfolio-tab__count">{getCount(tab.id)}</span>
+            </button>
+          ))}
         </div>
-      </section>
+      </div>
 
-      {/* FEATURED WORKS */}
-      <section className="section featured-section">
+      {/* CARDS GRID */}
+      <section className="section portfolio-section">
         <div className="container">
-          <div className="section-header">
-            <p className="section-eyebrow">Selected Works</p>
-            <h2 className="heading-lg">Featured Stories</h2>
-            <div className="section-divider" />
-          </div>
-          <div className="featured-grid">
-            {featured.map((item) => (
+          <div className="portfolio-grid">
+            {displayed.map((item) => (
               <WorkCard key={item.id} item={item} />
             ))}
-          </div>
-          <div className="featured-more">
-            <Link to="/writing" className="btn btn-outline">All Writing</Link>
-            <Link to="/multimedia" className="btn btn-outline">All Multimedia</Link>
           </div>
         </div>
       </section>

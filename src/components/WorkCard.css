@@ -12,13 +12,13 @@
 }
 
 .work-card__color-bar[data-category="multimedia"] {
-  background: linear-gradient(90deg, var(--color-violet), var(--color-primary));
+  background: linear-gradient(90deg, #E85D04, var(--color-accent));
 }
 .work-card__color-bar[data-category="writing-tech"] {
-  background: linear-gradient(90deg, var(--color-primary), var(--color-teal));
+  background: linear-gradient(90deg, var(--color-accent), #FBBF24);
 }
 .work-card__color-bar[data-category="writing-local"] {
-  background: linear-gradient(90deg, var(--color-teal), var(--color-emerald));
+  background: linear-gradient(90deg, #FBBF24, #F59E0B);
 }
 .work-card__color-bar[data-category="photography"] {
   background: linear-gradient(90deg, var(--color-accent), #FBBF24);
@@ -42,8 +42,8 @@
 .work-card__type {
   font-size: 0.74rem;
   font-weight: 600;
-  color: var(--color-violet);
-  background: var(--color-violet-light);
+  color: #C2410C;
+  background: var(--color-accent-light);
   padding: 2px 8px;
   border-radius: 100px;
 }
@@ -51,7 +51,7 @@
 .work-card__outlet {
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 .work-card__date {
@@ -95,7 +95,7 @@
 .work-card__read-more {
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-accent);
   white-space: nowrap;
   transition: transform 0.2s;
 }
