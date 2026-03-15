@@ -44,6 +44,85 @@
   max-width: 640px;
 }
 
+/* ===== SERIES FILTER TABS ===== */
+.nc-tabs-bar {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nc-tabs {
+  display: flex;
+  gap: 4px;
+  padding-top: 12px;
+  flex-wrap: wrap;
+}
+
+.nc-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: none;
+  background: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  margin-bottom: -1px;
+  white-space: nowrap;
+}
+
+.nc-tab:hover {
+  color: var(--color-text);
+}
+
+.nc-tab--active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+  font-weight: 600;
+}
+
+.nc-tab__count {
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+  font-size: 0.71rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 100px;
+}
+
+.nc-tab--active .nc-tab__count {
+  background: var(--color-accent-light);
+  color: var(--color-primary-dark);
+}
+
+/* ===== SERIES GROUP ===== */
+.nc-group {
+  margin-bottom: 56px;
+}
+
+.nc-group:last-child {
+  margin-bottom: 0;
+}
+
+.nc-group__heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
 /* ===== CLIPS LIST ===== */
 .nc-section {
   background: var(--color-bg);
@@ -65,7 +144,7 @@
 }
 
 .nc-item:first-child {
-  border-top: 1px solid var(--color-border);
+  border-top: none;
 }
 
 .nc-item__meta {
@@ -81,12 +160,6 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--color-text-muted);
-}
-
-.nc-item__outlet {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--color-accent);
 }
 
 .nc-item__date {
