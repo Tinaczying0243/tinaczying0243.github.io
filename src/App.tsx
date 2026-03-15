@@ -6,6 +6,7 @@ import Writing from "./pages/Writing";
 import SiliconLabsArticle from "./pages/SiliconLabsArticle";
 import AdvancedEnergyArticle from "./pages/AdvancedEnergyArticle";
 import NLightArticle from "./pages/nLightArticle";
+import MercuryArticle from "./pages/MercuryArticle";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/news-clips/silicon-labs-ti" element={<SiliconLabsArticle />} />
         <Route path="/news-clips/advanced-energy-aeis" element={<AdvancedEnergyArticle />} />
         <Route path="/news-clips/nlight-lasr" element={<NLightArticle />} />
+        <Route path="/articles/:slug" element={<MercuryArticle />} />
       </Routes>
       <Footer />
     </BrowserRouter>
