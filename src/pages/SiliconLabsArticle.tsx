@@ -82,7 +82,7 @@ export default function SiliconLabsArticle() {
           <Link to="/news-clips" className="article-back">← News Clips</Link>
           <div className="article-meta">
             <span className="article-meta__type">News Clip</span>
-            <span className="article-meta__outlet">Business Reporting</span>
+            <span className="article-meta__outlet">Weekly Semiconductor News</span>
             <span className="article-meta__date">February 4, 2025</span>
           </div>
           <h1 className="article-title">

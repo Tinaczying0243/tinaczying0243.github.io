@@ -128,7 +128,7 @@ export const works: WorkItem[] = [
   {
     id: "silicon-labs-ti",
     title: "Silicon Labs Jumps 49% After Texas Instruments Acquisition",
-    outlet: "Business Reporting",
+    outlet: "Weekly Semiconductor News",
     date: "February 2025",
     description: "Texas Instruments pays $7.5B for Silicon Labs — its biggest deal since 2011 — triggering a 49% single-session stock surge as TI bets on wireless IoT to offset slowing industrial and automotive revenues.",
     url: "/news-clips/silicon-labs-ti",
