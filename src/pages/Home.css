@@ -125,6 +125,34 @@
   font-weight: 600;
 }
 
+/* Per-tab active hues */
+.portfolio-tab[data-tab="writing-tech"].portfolio-tab--active {
+  color: #2E6B4F;
+  border-bottom-color: #2E6B4F;
+}
+.portfolio-tab[data-tab="writing-tech"].portfolio-tab--active .portfolio-tab__count {
+  background: rgba(46, 107, 79, 0.12);
+  color: #2E6B4F;
+}
+
+.portfolio-tab[data-tab="writing-local"].portfolio-tab--active {
+  color: #3A7A5A;
+  border-bottom-color: #3A7A5A;
+}
+.portfolio-tab[data-tab="writing-local"].portfolio-tab--active .portfolio-tab__count {
+  background: rgba(58, 122, 90, 0.12);
+  color: #3A7A5A;
+}
+
+.portfolio-tab[data-tab="multimedia"].portfolio-tab--active {
+  color: #1C4533;
+  border-bottom-color: #1C4533;
+}
+.portfolio-tab[data-tab="multimedia"].portfolio-tab--active .portfolio-tab__count {
+  background: rgba(28, 69, 51, 0.14);
+  color: #1C4533;
+}
+
 /* News Clips tab links to its own page */
 .portfolio-tab--link {
   text-decoration: none;

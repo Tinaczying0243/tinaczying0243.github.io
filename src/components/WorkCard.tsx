@@ -45,7 +45,7 @@ export default function WorkCard({ item, variant = "default" }: WorkCardProps) {
 
   if (item.hosted) {
     return (
-      <Link to={item.url} className={className}>
+      <Link to={item.url} className={className} data-category={item.category}>
         {inner}
       </Link>
     );
@@ -57,6 +57,7 @@ export default function WorkCard({ item, variant = "default" }: WorkCardProps) {
       target="_blank"
       rel="noopener noreferrer"
       className={className}
+      data-category={item.category}
     >
       {inner}
     </a>

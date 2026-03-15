@@ -119,6 +119,47 @@
   transform: translateX(3px);
 }
 
+/* ===== PER-CATEGORY COLOUR THEMING ===== */
+
+/* Tech & Business — forest green */
+.work-card[data-category="writing-tech"] .work-card__tag {
+  background: rgba(46, 107, 79, 0.10);
+  color: #2E6B4F;
+}
+.work-card[data-category="writing-tech"] .work-card__read-more {
+  color: #2E6B4F;
+}
+.work-card[data-category="writing-tech"]:hover {
+  border-color: rgba(46, 107, 79, 0.25);
+  box-shadow: 0 4px 20px rgba(46, 107, 79, 0.10);
+}
+
+/* Local News — sage mid-green */
+.work-card[data-category="writing-local"] .work-card__tag {
+  background: rgba(58, 122, 90, 0.10);
+  color: #3A7A5A;
+}
+.work-card[data-category="writing-local"] .work-card__read-more {
+  color: #3A7A5A;
+}
+.work-card[data-category="writing-local"]:hover {
+  border-color: rgba(74, 148, 112, 0.25);
+  box-shadow: 0 4px 20px rgba(74, 148, 112, 0.10);
+}
+
+/* Multimedia — deep dark forest */
+.work-card[data-category="multimedia"] .work-card__tag {
+  background: rgba(28, 69, 51, 0.10);
+  color: #1C4533;
+}
+.work-card[data-category="multimedia"] .work-card__read-more {
+  color: #1C4533;
+}
+.work-card[data-category="multimedia"]:hover {
+  border-color: rgba(28, 69, 51, 0.25);
+  box-shadow: 0 4px 20px rgba(28, 69, 51, 0.10);
+}
+
 /* Horizontal variant */
 .work-card--horizontal {
   flex-direction: row;

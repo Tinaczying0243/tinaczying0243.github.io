@@ -108,6 +108,7 @@ export default function Home() {
           {tabs.map((tab) => (
             <button
               key={tab.id}
+              data-tab={tab.id}
               className={`portfolio-tab ${activeTab === tab.id ? "portfolio-tab--active" : ""}`}
               onClick={() => setActiveTab(tab.id)}
             >
