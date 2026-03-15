@@ -126,6 +126,30 @@ export const works: WorkItem[] = [
 
   // NEWS CLIPS
   {
+    id: "nlight-lasr",
+    title: "nLight Surges 770% in Past Year as Defense Sales Jump",
+    outlet: "Weekly Semiconductor News",
+    date: "March 2025",
+    description: "nLight hits a five-year high on record $175M in aerospace and defense revenue — up 60% — as U.S. government demand for directed-energy laser weapons accelerates.",
+    url: "/news-clips/nlight-lasr",
+    tags: ["Defense Tech", "Lasers", "Semiconductors"],
+    category: "news-clip",
+    hosted: true,
+    type: "News Clip",
+  },
+  {
+    id: "advanced-energy-aeis",
+    title: "Advanced Energy Climbs 150% as Data-Center Revenue Doubles",
+    outlet: "Weekly Semiconductor News",
+    date: "February 2025",
+    description: "Advanced Energy Industries posts $1.8B in revenue as data-center sales surge 107% to $587M, fueled by AI infrastructure spending from Amazon, Meta, Microsoft, and Alphabet.",
+    url: "/news-clips/advanced-energy-aeis",
+    tags: ["Semiconductors", "Data Centers", "AI Infrastructure"],
+    category: "news-clip",
+    hosted: true,
+    type: "News Clip",
+  },
+  {
     id: "silicon-labs-ti",
     title: "Silicon Labs Jumps 49% After Texas Instruments Acquisition",
     outlet: "Weekly Semiconductor News",
