@@ -3,13 +3,13 @@
 }
 
 .page-hero--multimedia {
-  background: linear-gradient(150deg, #FFF7ED 0%, #FFF2E8 60%, #FFFBEB 100%);
+  background: linear-gradient(150deg, #F8FCF4 0%, #F0F6F2 60%, #F8FCF4 100%);
 }
 .page-hero--writing {
-  background: linear-gradient(150deg, #FFF7ED 0%, #FFF2E8 60%, #FFFBEB 100%);
+  background: linear-gradient(150deg, #F8FCF4 0%, #F0F6F2 60%, #F8FCF4 100%);
 }
 .page-hero--photography {
-  background: linear-gradient(150deg, #FFF7ED 0%, #FFF5F0 60%, #FFFBEB 100%);
+  background: linear-gradient(150deg, #F8FCF4 0%, #EFF5F1 60%, #F8FCF4 100%);
 }
 
 .page-hero h1 { margin-bottom: 16px; }
@@ -47,10 +47,10 @@
 }
 
 .mm-feature-card__accent[data-id="fulbright"] {
-  background: linear-gradient(90deg, var(--color-violet), var(--color-primary), var(--color-teal));
+  background: linear-gradient(90deg, #1C4533, #2E6B4F, #4A9470);
 }
 .mm-feature-card__accent[data-id="deportation"] {
-  background: linear-gradient(90deg, var(--color-accent), #FBBF24, var(--color-emerald));
+  background: linear-gradient(90deg, #2E6B4F, #4A9470, #7ABF9A);
 }
 
 .mm-feature-card__body {
@@ -70,7 +70,7 @@
 .mm-feature-card__outlet {
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 .mm-feature-card__date {

@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] — 2026-03-14
+
+### Changed
+- Replaced warm orange palette with sage off-white (#F8FCF4, sourced directly from portfolio PDF) + deep forest green (#2E6B4F) as complementary accent
+- Background, surface, border, text, shadow tokens all updated to green-family palette
+- Hero gradient updated to match new off-white background
+- Card color bars updated to differentiated forest green gradients per category
+- Card outlet and read-more link colors updated to forest green
+- Card type badge changed from colored pill to plain muted uppercase text (less visual noise)
+- Card tags replaced from multi-color rotating classes to a single quiet neutral chip (focus on content)
+- Tab active states (home and writing) updated to forest green
+- Category dot indicators (writing page) updated to forest green gradients
+- Multimedia page hero and feature card accents updated to forest green palette
+- All `.text-gradient` updated from orange to green family
+
 ## [1.2.0] — 2026-03-14
 
 ### Changed
