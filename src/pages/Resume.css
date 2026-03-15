@@ -1,0 +1,349 @@
+/* ===== RESUME HEADER ===== */
+.resume-header {
+  background: linear-gradient(150deg, #EFF6FF 0%, #F0F4FF 60%, #F5F3FF 100%);
+  padding: 64px 0 56px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.resume-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.resume-header__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resume-header__info h1 {
+  margin: 0;
+}
+
+.resume-header__subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.resume-header__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.resume-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.resume-contact-item:hover {
+  color: var(--color-primary);
+}
+
+.resume-header__avatar {
+  flex-shrink: 0;
+}
+
+.resume-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+}
+
+/* ===== RESUME BODY ===== */
+.resume-body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Blocks */
+.resume-block {
+  margin-bottom: 40px;
+}
+
+.resume-block:last-child {
+  margin-bottom: 0;
+}
+
+.resume-block__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-primary-light);
+  margin-bottom: 20px;
+}
+
+/* Skills */
+.skill-group {
+  margin-bottom: 16px;
+}
+
+.skill-group__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.skill-group__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-pill {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  padding: 4px 11px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Education */
+.edu-item {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.edu-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.edu-item__period {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.edu-item__institution {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.edu-item__degree {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2px;
+}
+
+.edu-item__location {
+  font-size: 0.76rem;
+  color: var(--color-text-muted);
+}
+
+.edu-item__detail {
+  font-size: 0.78rem;
+  color: var(--color-primary);
+  margin-top: 4px;
+}
+
+/* Research */
+.research-item {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.research-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.research-item__date {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.research-item__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 4px 0;
+}
+
+.research-item__desc {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.research-item__link {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: 4px;
+  text-decoration: none;
+}
+
+/* Experience */
+.exp-item {
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+}
+
+.exp-item--bordered {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.exp-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.exp-item__company {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.exp-item__title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.exp-item__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.exp-item__period {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.exp-item__location {
+  font-size: 0.74rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.exp-item__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exp-item__bullets li {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  padding-left: 16px;
+  position: relative;
+}
+
+.exp-item__bullets li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-size: 0.7rem;
+  top: 2px;
+}
+
+/* Download section */
+.resume-download-section {
+  background: var(--color-surface-2);
+  border-top: 1px solid var(--color-border);
+}
+
+.resume-download {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.resume-download h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.resume-download p {
+  font-size: 0.83rem;
+  color: var(--color-text-secondary);
+}
+
+/* Print styles */
+@media print {
+  .navbar, .footer, .resume-download-section { display: none; }
+  .resume-body { grid-template-columns: 240px 1fr; gap: 32px; }
+  .section { padding: 24px 0; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .resume-body { grid-template-columns: 1fr; }
+  .resume-header__avatar { display: none; }
+  .exp-item__header { flex-direction: column; gap: 4px; }
+  .exp-item__right { align-items: flex-start; }
+}
+
+@media (max-width: 600px) {
+  .resume-download { flex-direction: column; text-align: center; }
+}

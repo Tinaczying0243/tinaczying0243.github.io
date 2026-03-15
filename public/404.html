@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tina Chen — Multimedia Journalist</title>
+  <script>
+    // SPA redirect for GitHub Pages
+    // Stores the full path in sessionStorage then redirects to index.html
+    const path = window.location.pathname;
+    const repo = '/tina-chen-portfolio';
+    const subPath = path.replace(repo, '');
+    if (subPath && subPath !== '/') {
+      sessionStorage.setItem('spa_redirect', subPath);
+    }
+    window.location.replace(repo + '/');
+  </script>
+</head>
+<body></body>
+</html>

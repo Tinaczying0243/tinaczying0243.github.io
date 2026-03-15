@@ -1,0 +1,119 @@
+.work-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.work-card__color-bar {
+  height: 5px;
+  flex-shrink: 0;
+}
+
+.work-card__color-bar[data-category="multimedia"] {
+  background: linear-gradient(90deg, var(--color-violet), var(--color-primary));
+}
+.work-card__color-bar[data-category="writing-tech"] {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-teal));
+}
+.work-card__color-bar[data-category="writing-local"] {
+  background: linear-gradient(90deg, var(--color-teal), var(--color-emerald));
+}
+.work-card__color-bar[data-category="photography"] {
+  background: linear-gradient(90deg, var(--color-accent), #FBBF24);
+}
+
+.work-card__body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.work-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.work-card__type {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--color-violet);
+  background: var(--color-violet-light);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+
+.work-card__outlet {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.work-card__date {
+  font-size: 0.76rem;
+  color: var(--color-text-muted);
+  margin-left: auto;
+}
+
+.work-card__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.35;
+}
+
+.work-card__desc {
+  font-size: 0.87rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.work-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.work-card__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.work-card__read-more {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+  transition: transform 0.2s;
+}
+
+.work-card:hover .work-card__read-more {
+  transform: translateX(3px);
+}
+
+/* Horizontal variant */
+.work-card--horizontal {
+  flex-direction: row;
+}
+
+.work-card--horizontal .work-card__color-bar {
+  width: 5px;
+  height: auto;
+}
+
+.work-card--horizontal .work-card__body {
+  padding: 20px 22px;
+}
