@@ -4,7 +4,7 @@ Portfolio website for Tina Chen, multimedia journalist at UC Berkeley Graduate S
 
 ## Live Site
 
-`https://<your-github-username>.github.io/tina-chen-portfolio/`
+`https://tinaczying0243.github.io/`
 
 ## Stack
 
