@@ -15,7 +15,6 @@ export default function Footer() {
           <Link to="/">Home</Link>
           <Link to="/multimedia">Multimedia</Link>
           <Link to="/writing">Writing</Link>
-          <Link to="/photography">Photography</Link>
         </nav>
 
         <div className="footer__contact">

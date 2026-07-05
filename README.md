@@ -18,11 +18,10 @@ Portfolio website for Tina Chen, multimedia journalist at UC Berkeley Graduate S
 
 | Page | Route | Description |
 |------|-------|-------------|
-| Home | `/` | Hero, reporting beats, featured works, languages |
+| Home | `/` | Hero, sticky tab bar, and filtered work grid |
 | Multimedia | `/multimedia` | Interactive projects and multimedia packages |
-| Writing | `/writing` | Tech/Business + Local News tabs with 6 articles |
-| Photography | `/photography` | Visual journalism and documentary photography |
-| Resume | `/resume` | Full CV with experience, education, skills |
+| Writing | `/writing` | Tech/Business + Local News tabs |
+| Hosted articles | `/articles/:slug`, `/news-clips/*` | Full-text Mercury News and original work |
 
 ## Development
 
@@ -46,9 +45,10 @@ npm run preview   # Preview production build
 
 ```
 src/
-  data/portfolioData.ts   # All content data (works, resume, journalist info)
-  components/             # Navbar, Footer, WorkCard
-  pages/                  # Home, Multimedia, Writing, Photography, Resume
+  data/portfolioData.ts   # All content data (works, journalist info)
+  data/mercuryArticles.ts # Hosted Mercury News article content
+  components/             # Footer, WorkCard, ScrollToTop
+  pages/                  # Home, Multimedia, Writing, hosted articles
   index.css               # Global styles + CSS custom properties
 ```
 
