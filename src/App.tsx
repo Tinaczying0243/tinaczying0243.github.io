@@ -5,7 +5,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <BrowserRouter basename="/tina-chen-portfolio">
+    <BrowserRouter basename="/">
       <ScrollToTop />
       <AppRoutes />
       <Footer />

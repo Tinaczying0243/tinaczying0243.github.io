@@ -9,7 +9,7 @@
     // Encodes the path into a query string so the root index.html is always served.
     // history.replaceState in index.html silently restores the real URL before React boots.
     var l = window.location;
-    var segmentCount = 1; // /tina-chen-portfolio = 1 segment
+    var segmentCount = 0;
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
       l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?/' +

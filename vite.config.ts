@@ -14,5 +14,5 @@ export default defineConfig({
     }),
     react(),
   ],
-  base: "/tina-chen-portfolio/",
+  base: "/",
 });
