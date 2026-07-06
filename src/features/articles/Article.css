@@ -11,7 +11,7 @@
 
 /* ===== HEADER ===== */
 .article-header {
-  background: #F8FCF4;
+  background: #f8fcf4;
   padding: 64px 0 56px;
   border-bottom: 1px solid var(--color-border);
   position: relative;
@@ -19,7 +19,7 @@
 }
 
 .article-header::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse 85% 100% at 50% 50%, transparent 40%, rgba(20, 30, 25, 0.06) 100%);
@@ -79,7 +79,7 @@
 }
 
 .article-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(1.6rem, 3.5vw, 2.4rem);
   font-weight: 700;
   line-height: 1.2;
@@ -98,6 +98,16 @@
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
+}
+
+.article-tag {
+  font-size: 0.71rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: var(--color-surface-2);
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.01em;
 }
 
 /* ===== BODY ===== */
@@ -120,7 +130,7 @@
 }
 
 .article-quote p {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 1.15rem;
   font-style: italic;
   color: var(--color-text);
@@ -128,7 +138,7 @@
   margin-bottom: 12px;
 }
 
-.article-quote cite {
+.article-quote p:last-child {
   font-size: 0.82rem;
   font-style: normal;
   font-weight: 600;
@@ -136,92 +146,9 @@
   letter-spacing: 0.02em;
 }
 
-/* ===== CHARTS ===== */
-.chart-block {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 28px 28px 20px;
-  margin: 8px 0 36px;
-}
-
-.chart-block__caption {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.chart-block__label {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--color-text);
-  letter-spacing: 0.01em;
-}
-
-.chart-block__note {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-}
-
-.chart-block__inner--sm {
-  /* standard bar chart height set in component */
-}
-
-.chart-block__inner--pie {
-  /* donut chart */
-}
-
-/* Callout stat below a chart */
-.chart-block__callout {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid var(--color-border);
-}
-
-.chart-block__callout-number {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  line-height: 1;
-}
-
-.chart-block__callout-text {
-  font-size: 0.84rem;
-  color: var(--color-text-secondary);
-}
-
-/* ===== TOOLTIP ===== */
-.chart-tooltip {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 10px 14px;
-  font-family: 'Inter', sans-serif;
-  box-shadow: var(--shadow-sm);
-}
-
-.chart-tooltip__label {
-  font-size: 0.78rem;
-  color: var(--color-text-muted);
-  margin-bottom: 4px;
-}
-
-.chart-tooltip__value {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--color-text);
-}
-
 /* ===== HERO IMAGE ===== */
 .article-hero {
   background: var(--color-bg);
-  padding: 0 0 0;
 }
 
 .article-hero__figure {
@@ -253,9 +180,9 @@
   font-weight: 500;
 }
 
-/* ===== SECTION HEADINGS (generic articles) ===== */
+/* ===== SECTION HEADINGS ===== */
 .article-section-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-text);
@@ -270,7 +197,7 @@
 }
 
 .article-map-embed__title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-text);
@@ -283,7 +210,7 @@
   border: 1px solid var(--color-border);
   border-radius: 10px;
   display: block;
-  background: #F8FCF4;
+  background: #f8fcf4;
   box-shadow: 0 2px 12px rgba(46, 107, 79, 0.08);
 }
 
@@ -326,9 +253,19 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .article-header { padding: 48px 0 40px; }
-  .article-body { padding: 40px 0 72px; }
-  .chart-block { padding: 20px 16px 16px; }
-  .article-meta__date { margin-left: 0; }
-  .article-map-embed__iframe { height: 380px; }
+  .article-header {
+    padding: 48px 0 40px;
+  }
+
+  .article-body {
+    padding: 40px 0 72px;
+  }
+
+  .article-meta__date {
+    margin-left: 0;
+  }
+
+  .article-map-embed__iframe {
+    height: 380px;
+  }
 }

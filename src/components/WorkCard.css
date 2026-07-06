@@ -36,6 +36,13 @@
   flex-wrap: wrap;
 }
 
+.work-card__featured {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
 .work-card__type {
   font-size: 0.72rem;
   font-weight: 500;

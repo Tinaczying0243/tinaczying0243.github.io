@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigationType } from "react-router-dom";
-import { journalist, works } from "../data/portfolioData";
+import { journalist, works } from "../content";
 import WorkCard from "../components/WorkCard";
 import "./Home.css";
 
@@ -24,6 +24,7 @@ function getWorks(tab: Tab) {
 }
 
 const SCROLL_KEY = "home-scroll-y";
+const featuredWorks = works.filter((work) => work.featured);
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<Tab>("all");
@@ -88,13 +89,29 @@ export default function Home() {
           {/* Right: photo */}
           <div className="hero__photo-col">
             <img
-              src="/tina-chen-portfolio/tina-photo.jpg"
+              src={`${import.meta.env.BASE_URL}tina-photo.jpg`}
               alt="Tina Chen"
               className="hero__photo"
             />
           </div>
         </div>
       </section>
+
+      {featuredWorks.length > 0 && (
+        <section className="featured-section">
+          <div className="container">
+            <div className="featured-section__header">
+              <p className="section-eyebrow">Featured</p>
+              <h2 className="heading-md featured-section__title">Selected Work</h2>
+            </div>
+            <div className="featured-grid">
+              {featuredWorks.map((item) => (
+                <WorkCard key={item.id} item={item} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* PORTFOLIO TABS */}
       <div className="portfolio-tabs-bar">

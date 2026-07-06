@@ -1,4 +1,4 @@
-import { works } from "../data/portfolioData";
+import { works } from "../content";
 import "./Multimedia.css";
 
 const multimediaWorks = works.filter((w) => w.category === "multimedia");

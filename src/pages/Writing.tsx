@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { works } from "../data/portfolioData";
+import { works } from "../content";
 import WorkCard from "../components/WorkCard";
 import "./Writing.css";
 

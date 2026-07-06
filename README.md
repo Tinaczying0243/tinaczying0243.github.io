@@ -28,7 +28,8 @@ Portfolio website for Tina Chen, multimedia journalist at UC Berkeley Graduate S
 ```bash
 npm install
 npm run dev       # Start dev server at localhost:5173
-npm run build     # Production build to dist/
+npm run validate-content  # Validate hosted article slugs/frontmatter
+npm run build     # Validate content + production build to dist/
 npm run preview   # Preview production build
 ```
 
@@ -45,12 +46,27 @@ npm run preview   # Preview production build
 
 ```
 src/
-  data/portfolioData.ts   # All content data (works, journalist info)
-  data/mercuryArticles.ts # Hosted Mercury News article content
+  content/
+    journalist.ts         # Journalist profile/contact data
+    works.ts              # Portfolio catalog entries
+    articles/*.mdx        # Hosted article content + frontmatter
+    index.ts              # Content loader + enrichWorks()
+  features/articles/      # Shared article layout and renderer
   components/             # Footer, WorkCard, ScrollToTop
-  pages/                  # Home, Multimedia, Writing, hosted articles
+  pages/                  # Home, Multimedia, Writing
+  app/routes.tsx          # Route definitions + legacy redirects
   index.css               # Global styles + CSS custom properties
 ```
+
+## Feature Work on the Home Page
+
+Add or remove `featured: true` on any entry in `src/content/works.ts`. Featured items appear in the home page spotlight section and show a star on their cards.
+
+## Add a New Hosted Article
+
+1. Create `src/content/articles/my-slug.mdx` with frontmatter and article body.
+2. Add a hosted catalog entry to `src/content/works.ts` with the same `slug`.
+3. Run `npm run validate-content` and `npm run build`.
 
 ## Changelog
 
