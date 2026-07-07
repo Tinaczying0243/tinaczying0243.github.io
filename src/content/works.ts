@@ -194,7 +194,7 @@ export const worksCatalog: WorkCatalogItem[] = [
     description:
       "When shoppers order from Temu, few know their packages may be sorted and shipped from a Bay Area garage. Inside the Chinese immigrant networks quietly powering a new logistics economy.",
     category: "writing-tech",
-    featured: false,
+    featured: true,
     hosted: true,
   },
   {
@@ -212,6 +212,7 @@ export const worksCatalog: WorkCatalogItem[] = [
     description:
       "Memory prices up 60% have priced PC builders out of upgrades and pushed Sony, Nintendo, and Valve to raise console prices — while the gaming ETF has slid 23% since October.",
     category: "writing-tech",
+    featured: true,
     hosted: true,
   },
   {
