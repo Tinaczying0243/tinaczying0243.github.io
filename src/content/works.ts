@@ -40,27 +40,10 @@ export const worksCatalog: WorkCatalogItem[] = [
     hosted: true,
   },
   {
-    id: "california-layoffs",
-    slug: "california-layoffs",
-    description:
-      "UC, Stanford, Cal State — all cutting jobs as federal dollars dry up. What's driving California's university crisis, and who gets left behind.",
-    category: "writing-tech",
-    featured: false,
-    hosted: true,
-  },
-  {
     id: "labubu",
     slug: "labubu",
     description:
       "A $70 blind box from Asia is spawning Bay Area side hustles. Inside the collectors, resellers, and artists riding the Labubu wave.",
-    category: "writing-tech",
-    hosted: true,
-  },
-  {
-    id: "valkyries-data",
-    slug: "valkyries-data",
-    description:
-      "The Valkyries have a mascot named Violet. How does she stack up against the rest of the WNBA? A data-driven comparison of every team's brand identity.",
     category: "writing-tech",
     hosted: true,
   },
@@ -117,6 +100,15 @@ export const worksCatalog: WorkCatalogItem[] = [
     type: "Feature",
   },
   {
+    id: "california-layoffs",
+    slug: "california-layoffs",
+    description:
+      "UC, Stanford, Cal State — all cutting jobs as federal dollars dry up. What's driving California's university crisis, and who gets left behind.",
+    category: "writing-local",
+    featured: false,
+    hosted: true,
+  },
+  {
     id: "wronged-retailer",
     slug: "wronged-retailer",
     description:
@@ -129,6 +121,14 @@ export const worksCatalog: WorkCatalogItem[] = [
     slug: "legionnaires",
     description:
       "A primer on the waterborne bacterial illness — how it spreads through cooling towers and plumbing systems, which populations are most at risk, and what Bay Area residents should know.",
+    category: "writing-local",
+    hosted: true,
+  },
+  {
+    id: "valkyries-data",
+    slug: "valkyries-data",
+    description:
+      "The Valkyries have a mascot named Violet. How does she stack up against the rest of the WNBA? A data-driven comparison of every team's brand identity.",
     category: "writing-local",
     hosted: true,
   },

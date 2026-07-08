@@ -24,7 +24,21 @@ function getWorks(tab: Tab) {
 }
 
 const SCROLL_KEY = "home-scroll-y";
-const featuredWorks = works.filter((work) => work.featured);
+const FEATURED_PRIORITY = ["memory-stocks-ai-supply", "gaming-memory-crunch"];
+
+function getFeaturedWorks() {
+  const priority = new Map(FEATURED_PRIORITY.map((id, index) => [id, index]));
+
+  return works
+    .filter((work) => work.featured)
+    .sort((a, b) => {
+      const aRank = priority.get(a.id) ?? FEATURED_PRIORITY.length;
+      const bRank = priority.get(b.id) ?? FEATURED_PRIORITY.length;
+      return aRank - bRank;
+    });
+}
+
+const featuredWorks = getFeaturedWorks();
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<Tab>("all");
